@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Maaz Mahboob — AI Engineer & ML Researcher specializing in computer vision, medical imaging AI, and LLM systems. B.Tech AI, Aligarh Muslim University. 3× published researcher — arXiv, Springer, IGI Global.">
 <title>Maaz Mahboob — AI Engineer & ML Researcher</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -134,7 +135,7 @@ nav.scrolled {
   background: var(--teal);
   animation: pulse 2.5s ease-in-out infinite;
 }
-.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links { display: flex; gap: 30px; list-style: none; }
 .nav-links a {
   font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--text3);
@@ -249,7 +250,7 @@ nav.scrolled {
 }
 .hero-title {
   font-family: var(--mono); font-size: 12px; color: var(--text3);
-  letter-spacing: 0.12em; margin-bottom: 30px;
+  letter-spacing: 0.1em; margin-bottom: 30px;
   opacity: 0; animation: fadeUp 0.9s ease 0.35s forwards;
 }
 .hero-title span { color: var(--accent); }
@@ -458,8 +459,12 @@ section { padding: 110px 52px; max-width: 1100px; margin: 0 auto; }
   transition: all 0.25s; cursor: default;
 }
 .metric:hover { background: rgba(79,142,247,0.12); border-color: rgba(79,142,247,0.3); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(79,142,247,0.1); }
-.metric-val { font-family: var(--serif); font-size: 26px; color: var(--accent2); line-height: 1; }
+.metric-val { font-family: var(--serif); font-size: 24px; color: var(--accent2); line-height: 1; }
 .metric-label { font-family: var(--mono); font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.12em; margin-top: 4px; }
+.exp-repo-link {
+  margin-top: 24px; padding-top: 22px; border-top: 1px solid var(--border);
+  display: flex; justify-content: flex-end;
+}
 
 /* ── PROJECTS ── */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 26px; }
@@ -493,7 +498,7 @@ section { padding: 110px 52px; max-width: 1100px; margin: 0 auto; }
   transition: all 0.2s; letter-spacing: 0.04em; cursor: default;
 }
 .tech-pill:hover { color: var(--accent2); border-color: rgba(79,142,247,0.3); background: rgba(79,142,247,0.06); }
-.project-footer { border-top: 1px solid var(--border); padding-top: 16px; display: flex; justify-content: flex-end; }
+.project-footer { border-top: 1px solid var(--border); padding-top: 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
 .project-type { font-family: var(--mono); font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.12em; }
 
 /* ── 3D TILT ── */
@@ -566,6 +571,26 @@ section { padding: 110px 52px; max-width: 1100px; margin: 0 auto; }
   background: rgba(167,139,250,0.07); border: 1px solid rgba(167,139,250,0.18);
   padding: 3px 10px; border-radius: 4px;
 }
+
+/* ── REPOSITORIES ── */
+.repos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.repo-card {
+  background: linear-gradient(145deg, var(--surface) 0%, var(--bg3) 100%);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 28px; text-decoration: none; display: block;
+  position: relative; overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.repo-card:hover { border-color: var(--border2); transform: translateY(-4px); box-shadow: 0 18px 44px rgba(0,0,0,0.45), 0 0 34px rgba(79,142,247,0.08); }
+.repo-card-arrow {
+  position: absolute; top: 24px; right: 22px; color: var(--text3);
+  font-size: 14px; transition: transform 0.25s, color 0.25s;
+}
+.repo-card:hover .repo-card-arrow { color: var(--accent); transform: translate(3px, -3px); }
+.repo-card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 13px; padding-right: 22px; }
+.repo-card-head svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+.repo-card-name { font-family: var(--mono); font-size: 12.5px; color: var(--text); letter-spacing: 0.01em; line-height: 1.4; word-break: break-word; }
+.repo-card-desc { font-size: 13px; color: var(--text2); line-height: 1.72; }
 
 /* ── SKILLS ── */
 .skills-layout { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
@@ -690,6 +715,9 @@ footer {
   .pub-index { display: none; }
   .hero-name { font-size: clamp(48px, 14vw, 72px); }
 }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
 </style>
 </head>
 <body>
@@ -721,6 +749,7 @@ footer {
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#publications">Research</a></li>
+    <li><a href="#repos">Code</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -743,7 +772,7 @@ footer {
     </div>
     <h1 class="hero-name" id="hero-name">Maaz<br><em id="hero-name-em">Mahboob</em></h1>
     <div class="hero-title">
-      <span>AI Engineer</span> · ML Researcher · Computer Vision &amp; NLP · Aligarh, India
+      <span>AI Engineer</span> · 3× Research Author · Computer Vision &amp; LLM Systems · GATE DA 2025 (AIR 6991)
     </div>
     <p class="hero-desc">
       Building intelligent systems at the intersection of deep learning, computer vision, and generative AI. Focused on research that matters — from healthcare diagnostics to LLM reliability.
@@ -773,8 +802,8 @@ footer {
         <div class="hero-stat-label">Publications</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num counter" data-target="0.98" data-decimals="2">0</div>
-        <div class="hero-stat-label">Best AUC-ROC</div>
+        <div class="hero-stat-num counter" data-target="9" data-decimals="0">0</div>
+        <div class="hero-stat-label">Repositories Shipped</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-num counter" data-target="8.22" data-decimals="2">0</div>
@@ -858,18 +887,25 @@ footer {
             <div class="exp-role">Python & Machine Learning Intern</div>
             <div class="exp-company">SURE TRUST · Remote</div>
           </div>
-          <div class="exp-date">Sep 2025 – Present</div>
+          <div class="exp-date">Sep 2025 – May 2026</div>
         </div>
         <ul class="exp-points">
-          <li>Building production-grade REST APIs with FastAPI — Employee Task Tracker, Instagram-style post management, and token-based authentication systems with Pydantic validation and modular routing</li>
-          <li>Generating interactive API documentation (Swagger UI, ReDoc) as part of full-stack ML deployment workflow</li>
-          <li>Progressing through an end-to-end ML curriculum: NumPy, Pandas, Matplotlib, Seaborn applied to Exploratory Data Analysis and Supervised Learning pipelines</li>
-          <li>Applying feature engineering and EDA best practices to prepare datasets for downstream modeling tasks</li>
+          <li>Engineered a full-stack clinical AI application around a <strong style="color:var(--text)">YOLOv12-m</strong> chest X-ray detection model trained on the ChestX-ray14 dataset, with a Streamlit interface for upload, contrast/threshold tuning, and severity-coded bounding-box visualization</li>
+          <li>Built the inference-to-report pipeline end-to-end — OpenCV bounding-box rendering feeding a locally-hosted <strong style="color:var(--text)">Ollama LLM (Qwen3:14B)</strong> that generates natural-language clinical impressions, with SQLite persistence and PDF export via FPDF</li>
+          <li>Closed the loop with a physician-feedback mechanism that converts corrected bounding-box annotations into a structured retraining dataset, alongside role-based (Doctor/Admin) authentication</li>
+          <li>Developed REST APIs with FastAPI, Pydantic, and JWT auth across a 9-month, 8-assignment curriculum spanning API design and applied data science, including a clinical cardiovascular classification model</li>
         </ul>
         <div class="exp-metrics">
-          <div class="metric"><div class="metric-val">FastAPI</div><div class="metric-label">Framework</div></div>
-          <div class="metric"><div class="metric-val">REST</div><div class="metric-label">Architecture</div></div>
-          <div class="metric"><div class="metric-val">EDA</div><div class="metric-label">ML Pipelines</div></div>
+          <div class="metric"><div class="metric-val">YOLOv12-m</div><div class="metric-label">Detection Model</div></div>
+          <div class="metric"><div class="metric-val">Qwen3:14B</div><div class="metric-label">Local LLM Reports</div></div>
+          <div class="metric"><div class="metric-val">FastAPI</div><div class="metric-label">REST + JWT Auth</div></div>
+          <div class="metric"><div class="metric-val">8</div><div class="metric-label">Assignments Completed</div></div>
+        </div>
+        <div class="exp-repo-link">
+          <a href="https://github.com/sure-trust/MAAZ-MAHBOOB-g36-python" target="_blank" class="pub-link">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
+            View Repository
+          </a>
         </div>
       </div>
 
@@ -883,16 +919,22 @@ footer {
           <div class="exp-date">Oct – Dec 2025</div>
         </div>
         <ul class="exp-points">
-          <li><strong style="color:var(--text)">Healthcare (Stroke Prediction):</strong> Addressed severe class imbalance (5% positives, 20:1 ratio) using CTGAN synthetic data generation — reduced imbalance to 2:1, a 90% improvement. Achieved AUC-ROC of 0.98 and F1-Score of 0.95 with XGBoost on the augmented dataset</li>
-          <li><strong style="color:var(--text)">Finance & Banking:</strong> Designed a deep ANN with dropout + batch normalization for loan approval prediction (92.3% accuracy, 88.3% precision); Random Forest for customer churn prediction (86.4% accuracy)</li>
-          <li>Deployed interactive Streamlit dashboards for model explainability and stakeholder reporting</li>
-          <li>Completed intensive curriculum spanning EDA, statistical inference, supervised/unsupervised learning, deep learning, and generative AI across healthcare, finance, and retail domains</li>
+          <li><strong style="color:var(--text)">Healthcare (Stroke Risk Prediction):</strong> Built an end-to-end pipeline for a severely imbalanced clinical dataset (19.5:1), training a CTGAN to synthesize minority-class samples and benchmarking XGBoost, Random Forest, and Logistic Regression</li>
+          <li>Identified a synthetic-to-real generalization gap through rigorous holdout evaluation and proposed a corrected train/test methodology — deployed as an interactive Streamlit risk-scoring prototype</li>
+          <li><strong style="color:var(--text)">Finance & Banking:</strong> Designed a deep ANN with dropout + batch normalization for loan approval prediction (92.3% accuracy, 88.3% precision); Random Forest + RFM/K-Means clustering for customer churn segmentation (86.4% accuracy)</li>
+          <li>Completed a 6-week intensive curriculum spanning statistical hypothesis testing, EDA, supervised/unsupervised learning, deep learning, and generative AI across healthcare, finance, and retail domains</li>
         </ul>
         <div class="exp-metrics">
-          <div class="metric"><div class="metric-val">0.98</div><div class="metric-label">AUC-ROC</div></div>
           <div class="metric"><div class="metric-val">92.3%</div><div class="metric-label">Loan Approval Acc.</div></div>
-          <div class="metric"><div class="metric-val">90%</div><div class="metric-label">Imbalance Reduction</div></div>
-          <div class="metric"><div class="metric-val">0.95</div><div class="metric-label">F1-Score</div></div>
+          <div class="metric"><div class="metric-val">86.4%</div><div class="metric-label">Churn Model Acc.</div></div>
+          <div class="metric"><div class="metric-val">19.5:1</div><div class="metric-label">Class Imbalance</div></div>
+          <div class="metric"><div class="metric-val">CTGAN</div><div class="metric-label">Synthetic Data Gen.</div></div>
+        </div>
+        <div class="exp-repo-link">
+          <a href="https://github.com/MaazMahboob/GNCIPL-AI-ML-" target="_blank" class="pub-link">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
+            View Repository
+          </a>
         </div>
       </div>
 
@@ -929,12 +971,16 @@ footer {
         <div class="project-desc">End-to-end deep learning pipeline for detecting 15 thoracic abnormalities in chest X-rays with bounding-box localization. Fine-tuned on VinBigData (15K images) with class rebalancing and early stopping.</div>
         <div class="project-stats">
           <span class="project-stat-item">87.1% Accuracy (Faster R-CNN)</span>
+          <span class="project-stat-item">84% Accuracy (YOLOv11)</span>
           <span class="project-stat-item">+30% mAP@0.5</span>
         </div>
         <div class="project-tech">
           <span class="tech-pill">PyTorch</span><span class="tech-pill">YOLOv11</span><span class="tech-pill">Faster R-CNN</span><span class="tech-pill">Detectron2</span><span class="tech-pill">OpenCV</span>
         </div>
-        <div class="project-footer"><span class="project-type">Computer Vision · Healthcare AI</span></div>
+        <div class="project-footer">
+          <span class="project-type">Computer Vision · Healthcare AI</span>
+          <a href="https://github.com/MaazMahboob/AI-Chest-Xray-Disease-Detection-System" target="_blank" class="pub-link" style="padding:3px 10px;font-size:10px;">GitHub →</a>
+        </div>
       </div>
     </div>
 
@@ -1013,14 +1059,17 @@ footer {
         <div class="project-tech">
           <span class="tech-pill">Scikit-learn</span><span class="tech-pill">Random Forest</span><span class="tech-pill">KNN</span><span class="tech-pill">Pandas</span>
         </div>
-        <div class="project-footer"><span class="project-type">ML · Regression</span></div>
+        <div class="project-footer">
+          <span class="project-type">ML · Regression</span>
+          <a href="https://github.com/MaazMahboob/car-price-prediction" target="_blank" class="pub-link" style="padding:3px 10px;font-size:10px;">GitHub →</a>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- PUBLICATIONS — UPDATED -->
+<!-- PUBLICATIONS -->
 <section id="publications" style="background:var(--bg2); max-width:100%; padding: 110px 0;">
   <div style="max-width:1100px; margin:0 auto; padding:0 52px;">
     <div class="section-eyebrow">Research & Publications</div>
@@ -1028,17 +1077,17 @@ footer {
 
     <div class="pubs-list">
 
-      <!-- PUB 1: arXiv — UPDATED (was wrong title, wrong status) -->
+      <!-- PUB 1: arXiv -->
       <div class="pub-card pub-featured tilt-card reveal">
         <div class="tilt-glare"></div>
         <div class="pub-index">1</div>
         <div>
           <span class="pub-type-badge badge-preprint">arXiv Preprint</span>
           <div class="pub-title">Mitigating LLM Hallucinations through Domain-Grounded Tiered Retrieval</div>
-          <div class="pub-authors"><strong>Maaz Mahboob</strong>, Md. Asraful Haque, Aasar Mehdi, Tamkeen Fatima</div>
+          <div class="pub-authors">Md. Asraful Haque, Aasar Mehdi, <strong>Maaz Mahboob</strong>, Tamkeen Fatima</div>
           <div class="pub-venue"><em>arXiv</em> · <a href="https://arxiv.org/abs/2603.17872" target="_blank">arXiv:2603.17872</a> · March 2026</div>
           <div class="pub-abstract">
-            Proposes a four-phase self-regulating RAG pipeline for mitigating LLM hallucinations via tiered retrieval and atomic claim verification. Benchmarked across 650 queries on TimeQA v2 and MMLU Global Facts.
+            Proposes a four-phase self-regulating RAG pipeline (LangGraph) for mitigating LLM hallucinations via tiered retrieval and atomic claim verification. Benchmarked across 650 queries on TimeQA v2 and MMLU Global Facts.
           </div>
           <div class="pub-metrics">
             <span class="pub-metric-item">83.7% Win Rate — TimeQA v2</span>
@@ -1073,6 +1122,10 @@ footer {
           </div>
           <div class="pub-footer">
             <div class="pub-status status-review"><span class="status-dot"></span> Under Review — Springer IJIT</div>
+            <a href="https://github.com/MaazMahboob/Multiple-disease-prediction-system" target="_blank" class="pub-link">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
+              View Repository
+            </a>
           </div>
         </div>
       </div>
@@ -1098,6 +1151,69 @@ footer {
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- REPOSITORIES -->
+<section id="repos">
+  <div class="section-eyebrow">Open Source</div>
+  <h2 class="section-title">Inside the<br><em>repositories</em></h2>
+  <div class="repos-grid reveal">
+
+    <a href="https://github.com/MaazMahboob/AI-Chest-Xray-Disease-Detection-System" target="_blank" class="repo-card">
+      <span class="repo-card-arrow">↗</span>
+      <div class="repo-card-head">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
+        <span class="repo-card-name">AI-Chest-Xray-Disease-Detection-System</span>
+      </div>
+      <div class="repo-card-desc">YOLO-based multi-disease chest X-ray detection pipeline with bounding-box localization — the source behind the major thesis project.</div>
+    </a>
+
+    <a href="https://github.com/sure-trust/MAAZ-MAHBOOB-g36-python" target="_blank" class="repo-card">
+      <span class="repo-card-arrow">↗</span>
+      <div class="repo-card-head">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
+        <span class="repo-card-name">sure-trust/MAAZ-MAHBOOB-g36-python</span>
+      </div>
+      <div class="repo-card-desc">Full SURE TRUST internship repository — FastAPI assignments, EDA/ML mini-projects, and the complete clinical AI capstone application.</div>
+    </a>
+
+    <a href="https://github.com/MaazMahboob/GNCIPL-AI-ML-" target="_blank" class="repo-card">
+      <span class="repo-card-arrow">↗</span>
+      <div class="repo-card-head">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
+        <span class="repo-card-name">GNCIPL-AI-ML-</span>
+      </div>
+      <div class="repo-card-desc">Global Next Consulting AI-ML internship work — CTGAN stroke-risk pipeline, loan approval ANN, and customer churn segmentation models.</div>
+    </a>
+
+    <a href="https://github.com/MaazMahboob/Multiple-disease-prediction-system" target="_blank" class="repo-card">
+      <span class="repo-card-arrow">↗</span>
+      <div class="repo-card-head">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
+        <span class="repo-card-name">Multiple-disease-prediction-system</span>
+      </div>
+      <div class="repo-card-desc">NLP disease-prediction system built on a fine-tuned PubMed BERT classifier — implementation behind the Springer IJIT submission.</div>
+    </a>
+
+    <a href="https://github.com/MaazMahboob/car-price-prediction" target="_blank" class="repo-card">
+      <span class="repo-card-arrow">↗</span>
+      <div class="repo-card-head">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
+        <span class="repo-card-name">car-price-prediction</span>
+      </div>
+      <div class="repo-card-desc">Regression pipeline for used-car price estimation with cross-validated Random Forest and KNN models.</div>
+    </a>
+
+    <a href="https://github.com/MaazMahboob/AI-Chest-Xray-detection-gui" target="_blank" class="repo-card">
+      <span class="repo-card-arrow">↗</span>
+      <div class="repo-card-head">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
+        <span class="repo-card-name">AI-Chest-Xray-detection-gui</span>
+      </div>
+      <div class="repo-card-desc">Standalone GUI front-end for the chest X-ray detection pipeline.</div>
+    </a>
+
   </div>
 </section>
 
@@ -1161,8 +1277,8 @@ footer {
       <div class="achievement-card tilt-card reveal">
         <div class="tilt-glare"></div>
         <div class="achievement-icon">⟁</div>
-        <div class="achievement-title">GATE 2025 Qualified</div>
-        <div class="achievement-desc">Qualified Graduate Aptitude Test in Engineering in Data Science & Artificial Intelligence — one of India's most competitive national engineering examinations, conducted by IIT Roorkee.</div>
+        <div class="achievement-title">GATE 2025 Qualified — AIR 6991</div>
+        <div class="achievement-desc">Qualified the Graduate Aptitude Test in Engineering in Data Science & Artificial Intelligence with All India Rank 6991 — one of India's most competitive national engineering examinations, conducted by IIT Roorkee.</div>
       </div>
       <div class="achievement-card tilt-card reveal reveal-delay-1">
         <div class="tilt-glare"></div>
@@ -1219,7 +1335,7 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-text">© 2025 <span>Maaz Mahboob</span> · Built with care · Aligarh, India</div>
+  <div class="footer-text">© 2026 <span>Maaz Mahboob</span> · Built with care · Aligarh, India</div>
   <div class="footer-text">AI Engineer · 3× Research Author · <span>Open to Opportunities</span></div>
 </footer>
 
